@@ -15,7 +15,7 @@ function submitDocument(event) {
   const price = document.getElementById("price").value.trim();
   const brand = document.getElementById("brand").value.trim();
 
-  if (!name || !description || !image || !price || !brand) {
+  if (name.length ===0 || description.length===0 || image.length===0 || price.length===0 || brand.length===0) {
     message.innerText = "Please make sure to input all fields";
     message.style.color = "red";
     return;

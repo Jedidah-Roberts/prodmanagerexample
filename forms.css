@@ -9,16 +9,17 @@ body {
   background-color: rgb(177, 173, 170);
   padding: 20px;
 }
-.container{
+.container {
   display: flex;
   column-gap: 20px;
 }
-.form-section, .display-section{
+.form-section,
+.display-section {
   background-color: white;
   padding: 20px;
   flex: 1;
 }
- 
+
 h1 {
   color: black;
   /* padding: 0.5rem; */
@@ -28,12 +29,11 @@ h1 {
 input,
 textarea {
   padding: 8px;
-  margin-top: 5px ;
+  margin-top: 5px;
   width: 80%;
 }
-label{
+label {
   font-weight: bold;
-  
 }
 button {
   padding: 8px;
@@ -54,46 +54,45 @@ button:hover {
   text-align: center;
 }
 
-#product-container{
+#product-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
 .product-card {
-    display: flex;
-    width: 50%;
-    height:auto;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+  display: flex;
+  width: 50%;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid #141313;
+  border-radius: 8px;
 }
 
-
 .product-card img {
-    width: 100%;
-    max-width: 200px;
-    height: 200px;
-    border-radius: 4px;
-    margin-bottom: 1rem;
+  width: 100%;
+  max-width: 200px;
+  height: 200px;
+  border-radius: 4px;
+  margin-bottom: 1rem;
 }
 
 .product-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-    color: #333;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #333;
 }
 
 .product-card p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
 }
 
 .product-card .price {
-    font-weight: bold;
-    color: #007b5e;
-    margin-top: 0.5rem;
+  font-weight: bold;
+  color: #007b5e;
+  margin-top: 0.5rem;
 }
