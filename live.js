@@ -46,7 +46,7 @@ function displayProduct(product) {
     <img src="${product.image}" alt="${product.name}">
     <h3>${product.name}</h3>
     <p>${product.description}</p>
-     <p class ="price">Price:</strong> $${product.price}</p>
+     <p class ="price">Price:</strong> &#8373;${product.price}</p>
     <p><strong>Brand ${product.brand}</p>
    
   `;
