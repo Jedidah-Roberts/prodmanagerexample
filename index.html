@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Manager</title>
+
+    <link rel="stylesheet" href="forms.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./live.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-section">
+        <h1>NEW PRODUCT</h1>
+        <p id="message"></p>
+        <form id="Form">
+          <label for="name"
+            >Name<br />
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter Product name"
+              required
+            /> </label
+          ><br />
+
+          <label for="description"
+            >Description<br />
+            <textarea
+              name=""
+              id="description"
+              rows="4"
+              placeholder="Give a brief description of the product"
+            ></textarea></label
+          ><br />
+
+          <label for="image-url"
+            >Image Url<br />
+            <input
+              type="text"
+              id="image-url"
+              required
+              placeholder="Insert your image's url here"
+            /> </label
+          ><br />
+
+          <label for="price"
+            >Price<br />
+            <input type="number" id="price" required /> </label
+          ><br />
+
+          <label for="brand"
+            >Brand<br />
+            <input
+              type="text"
+              id="brand"
+              required
+              placeholder="input the product brand"
+            /> </label
+          ><br />
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div class="display-section">
+        <h2>PRODUCT CARDS</h2>
+        <div id="product-container"></div>
+      </div>
+    </div>
+  </body>
+</html>
