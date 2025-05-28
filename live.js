@@ -15,9 +15,9 @@ function submitDocument(event) {
   const price = document.getElementById("price").value.trim();
   const brand = document.getElementById("brand").value.trim();
 
-  if (name.length ===0 || description.length===0 || image.length===0 || price.length===0 || brand.length===0) {
-    message.innerText = "Please make sure to input all fields";
-    message.style.color = "red";
+  if (name.length === 0 || description.length === 0 || image.length===0 || price.length===0 || brand.length === 0) {
+    message.innerText = "Please make sure to input all fields!";
+    message.classList.add("error");
     return;
   }
 
@@ -35,7 +35,7 @@ function submitDocument(event) {
 
   form.reset();
   message.innerText = "Product added successfully!";
-  message.style.color = "green";
+  message.classList.add("success")
 }
 
 function displayProduct(product) {

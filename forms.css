@@ -11,18 +11,23 @@ body {
 }
 .container {
   display: flex;
-  column-gap: 20px;
+ column-gap: 10px;
 }
 .form-section,
 .display-section {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.76);
   padding: 20px;
   flex: 1;
+}
+.error{
+  color: red;
+}
+.success{
+  color: green;
 }
 
 h1 {
   color: black;
-  /* padding: 0.5rem; */
   text-align: left;
 }
 
