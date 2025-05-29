@@ -1,22 +1,28 @@
 const form = document.getElementById("Form");
 const message = document.getElementById("message");
-const container = document.getElementById("product-container");
+const productContainer = document.getElementById("product-container");
 
-let products = [];
+const products = [];
 
-form.addEventListener("submit", submitDocument);
+form.addEventListener("submit", submitDocuments);
 
-function submitDocument(event) {
+function submitDocuments(event) {
   event.preventDefault();
 
-  const name = document.getElementById("name").value.trim();
-  const description = document.getElementById("description").value.trim();
-  const image = document.getElementById("image-url").value.trim();
-  const price = document.getElementById("price").value.trim();
-  const brand = document.getElementById("brand").value.trim();
+  const name = document.getElementById("name").value;
+  const description = document.getElementById("description").value;
+  const image = document.getElementById("image-url").value;
+  const price = document.getElementById("price").value;
+  const brand = document.getElementById("brand").value;
 
-  if (name.length === 0 || description.length === 0 || image.length===0 || price.length===0 || brand.length === 0) {
-    message.innerText = "Please make sure to input all fields!";
+  if (
+    name.length === 0 ||
+    description.length === 0 ||
+    image.length === 0 ||
+    price.length === 0 ||
+    brand.length === 0
+  ) {
+    message.textContent = "Please input all fields!";
     message.classList.add("error");
     return;
   }
@@ -34,22 +40,23 @@ function submitDocument(event) {
   displayProduct(product);
 
   form.reset();
-  message.innerText = "Product added successfully!";
-  message.classList.add("success")
-}
+  message.textContent = "Product added successfully!";
+  message.className("success");
 
-function displayProduct(product) {
-  const card = document.createElement("div");
-  card.className = "product-card";
+  function displayProduct(products) {
+    products.forEach((product) => {
+      const productCard = document.createElement("div");
+      productCard.classList.add("product-card");
 
-  card.innerHTML = `
-    <img src="${product.image}" alt="${product.name}">
-    <h3>${product.name}</h3>
-    <p>${product.description}</p>
-     <p class ="price">Price:</strong> &#8373;${product.price}</p>
-    <p><strong>Brand ${product.brand}</p>
-   
-  `;
+      productCard.innerHTML = `
+                <img src="${product.image}" alt="${product.name}">
+                <h3>${product.name}</h3>
+                <p>${product.description}</p>
+                <p class="price">Price: &#8373;${product.price.toFixed(2)}</p>
+                <p>Brand: ${product.brand}</p>
+                `;
 
-  container.appendChild(card);
+      productContainer.appendChild(productCard);
+    });
+  }
 }
