@@ -42,6 +42,7 @@ function submitDocuments(event) {
   form.reset();
   message.textContent = "Product added successfully!";
   message.className("success");
+}
 
   function displayProduct(products) {
     products.forEach((product) => {
@@ -59,4 +60,4 @@ function submitDocuments(event) {
       productContainer.appendChild(productCard);
     });
   }
-}
+
