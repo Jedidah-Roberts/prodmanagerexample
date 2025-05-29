@@ -22,7 +22,7 @@ function submitDocuments(event) {
     price.length === 0 ||
     brand.length === 0
   ) {
-    message.textContent = "Please input all fields!";
+    message.innerText = "Please input all fields!";
     message.classList.add("error");
     return;
   }
@@ -40,7 +40,7 @@ function submitDocuments(event) {
   displayProduct(product);
 
   form.reset();
-  message.textContent = "Product added successfully!";
+  message.innerText = "Product added successfully!";
   message.className("success");
 }
 
