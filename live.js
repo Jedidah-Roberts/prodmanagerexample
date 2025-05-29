@@ -4,9 +4,7 @@ const productContainer = document.getElementById("product-container");
 
 const products = [];
 
-form.addEventListener("submit", submitDocuments);
-
-function submitDocuments(event) {
+form.addEventListener("submit", function (event) {
   event.preventDefault();
 
   const name = document.getElementById("name").value;
@@ -41,23 +39,20 @@ function submitDocuments(event) {
 
   form.reset();
   message.innerText = "Product added successfully!";
-  message.className("success");
-}
+  message.className = "success";
+});
 
-  function displayProduct(products) {
-    products.forEach((product) => {
-      const productCard = document.createElement("div");
-      productCard.classList.add("product-card");
+function displayProduct(product) {
+  const productCard = document.createElement("div");
+  productCard.classList.add("product-card");
 
-      productCard.innerHTML = `
+  productCard.innerHTML = `
                 <img src="${product.image}" alt="${product.name}">
                 <h3>${product.name}</h3>
                 <p>${product.description}</p>
-                <p class="price">Price: &#8373;${product.price.toFixed(2)}</p>
+                <p class="price">Price: &#8373;${product.price}</p>
                 <p>Brand: ${product.brand}</p>
                 `;
 
-      productContainer.appendChild(productCard);
-    });
-  }
-
+  productContainer.appendChild(productCard);
+}
